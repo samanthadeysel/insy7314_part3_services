@@ -1,0 +1,33 @@
+$kind: http-request
+url: "{{baseUrl}}/api/auth/login"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"jane@example.com\",\r
+
+    \  \"password\": \"WrongPassword!\"\r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 401 Unauthorized\", function () {\r
+
+      \    pm.response.to.have.status(401);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Error returned without stack trace leakage\", function () {\r
+
+      \    var jsonData = pm.response.json();\r
+
+      \    pm.expect(jsonData).to.have.property(\"error\");\r
+
+      \    pm.expect(jsonData).to.not.have.property(\"stack\");\r
+
+      });"
+    language: text/javascript
+order: 4000

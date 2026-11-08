@@ -1,0 +1,6 @@
+name: INSY7314_PartTwo_Local
+values:
+  - key: baseUrl
+    value: ""
+  - key: token
+    value: ""

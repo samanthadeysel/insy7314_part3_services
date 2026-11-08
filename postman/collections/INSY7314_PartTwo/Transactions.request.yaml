@@ -1,0 +1,7 @@
+$kind: http-request
+url: https://localhost:5000/api/transactions/income
+method: GET
+body:
+  type: json
+  content: ""
+order: 8000

@@ -1,0 +1,14 @@
+$kind: http-request
+url: https://localhost:5000/api/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"sizwe@outlook.com\",\r
+
+    \    \"password\": \"PassWord123\"\r
+
+    }"
+settings: {}
+order: 3000

@@ -1,0 +1,12 @@
+$kind: collection
+description: ""
+variables:
+  - key: json_web_token_097u
+    secret: true
+    disabled: false
+  - key: token
+    value: ""
+    disabled: false
+  - key: clientToken
+    value: ""
+    disabled: false

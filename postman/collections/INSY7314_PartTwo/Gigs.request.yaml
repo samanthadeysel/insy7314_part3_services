@@ -1,0 +1,22 @@
+$kind: http-request
+url: https://localhost:5000/api/gig
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\": \"Freelance web dev\",\r
+
+    \    \"category\": \"Web Development\",\r
+
+    \    \"price\": 1234,\r
+
+    \    \"description\": \"Creating websites for easy use\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_097u}}"
+settings: {}
+order: 3000

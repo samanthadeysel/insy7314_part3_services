@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test:api": "newman run ../postman/INSY7314_PartTwo.postman_collection.json --insecure",
+    "test:report": "newman run ../postman/INSY7314_PartTwo.postman_collection.json --insecure -r cli,htmlextra --reporter-htmlextra-export ./newman-report.html"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "@logtail/node": "^0.6.1",
+    "@logtail/winston": "^0.6.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.3.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.1",
+    "winston": "^3.19.0",
+    "winston-transport": "^4.9.0",
+    "xss": "^1.0.17"
+  },
+  "devDependencies": {
+    "newman": "^6.2.3",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}

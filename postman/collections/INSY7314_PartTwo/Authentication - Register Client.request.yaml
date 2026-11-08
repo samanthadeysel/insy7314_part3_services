@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{baseUrl}}/api/auth/login"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"fullName\": \"John Client\",\r
+
+    \  \"email\": \"john@testing.com\",\r
+
+    \  \"password\": \"Password123!\",\r
+
+    \  \"role\": \"client\"\r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Client login successful\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      \    var jsonData = pm.response.json();\r
+
+      \    pm.collectionVariables.set(\"clientToken\", jsonData.token);\r
+
+      });"
+    language: text/javascript
+order: 4761

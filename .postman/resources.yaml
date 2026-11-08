@@ -1,0 +1,13 @@
+workspace:
+  id: b78c7f8a-08de-476f-88c9-844db21f85ce
+cloudResources:
+  collections:
+    ../postman/collections/SecureApiLU5 Collection: 56790891-e6549db7-da6c-40c4-aa26-ac194cee893c
+    ../postman/collections/My Collection: 56790891-8fcbc6ca-37b9-42e0-996d-9477291ee2e0
+    ../postman/collections/INSY7314_PartTwo: 56790891-335313ec-0eda-47b3-8b75-015b635c289e
+    ../postman/collections/INSY7314 - Part 1: 56790891-08d3ffd8-8541-4e47-9bee-47024803a3d1
+    ../postman/collections/My Collection-1: 56790891-66089ad1-7fd5-42ce-911b-6c6f232332ed
+  environments:
+    ../postman/environments/INSY7314_PartTwo_Local.environment.yaml: 56790891-1749519f-b160-4113-a23c-f99df5c2256b
+  globals:
+    ../postman/globals/workspace.globals.yaml: 48b9fec5-b938-459c-8a21-1969a27f2c32

@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{baseUrl}}/api/auth/login"
+method: POST
+scripts:
+  - type: afterResponse
+    code: "pm.test('Login returns token', function(){\r
+
+      \    const jsonData = pm.response.json();\r
+
+      \    pm.expect(jsonData).to.have.property('token');\r
+
+      });\r
+
+      \r
+
+      pm.test('Save token', function(){\r
+
+      \    const jsonData = pm.response.json();\r
+
+      \    pm.environment.set('token', jsonData.token);\r
+
+      });"
+    language: text/javascript
+settings: {}
+order: 1000
